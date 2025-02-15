@@ -90,8 +90,7 @@ function renderPendingTodos(){
     const todoPending = document.getElementById('todo-pending')
     todoPending.innerHTML=''
     todos.forEach((todo,index) =>{
-        
-        if(new Date(todo.date)<Date.now()){
+        if(todo.date<today && !todo.isDone){
             const row = document.createElement('div')
             row.classList.add('row')
             const div = document.createElement('div')
